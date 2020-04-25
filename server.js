@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 require("dotenv").config({ path: "config.env" });
+const Recipes = require("./models/Recipes");
+const Users = require("./models/User");
 mongoose
   .connect(process.env.Mongo_URL, {
     useNewUrlParser: true,
